@@ -1,0 +1,18 @@
+Punto de validación y cambio de formato XML
+https://www.freeformatter.com/xml-to-json-converter.html
+
+
+--Ejemplos XPATH de medicion
+--Obtener los recursos sensor
+/observacion/entidad/recursoIoT[@tipo='sensor']
+
+--obtener a entidad de interés
+string(//entidad[1]/@nombre)
+
+--obtener la propiedad de interés que mide el recursoIoT numero 1
+string(//recursoIoT[1]/caracteristica/@propiedad)
+
+--obtener la medición del recursoIoT número 1: medicion, unidad, hora
+string(//recursoIoT[1]/medicion)
+string(//recursoIoT[1]/unidad)
+string(//recursoIoT[1]/hora)

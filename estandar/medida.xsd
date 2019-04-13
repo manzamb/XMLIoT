@@ -1,0 +1,58 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="observacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="entidad">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="recursoIoT" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="caracteristica">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="propiedad" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:byte" name="medicion" minOccurs="0"/>
+                    <xs:element type="xs:string" name="unidad" minOccurs="0"/>
+                    <xs:element type="xs:byte" name="estado" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>1: Encendido 2:apagado</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="hora">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="utc" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="lugar">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:float" name="lat" use="optional"/>
+                            <xs:attribute type="xs:float" name="lon" use="optional"/>
+                            <xs:attribute type="xs:short" name="ele" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="tipo" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="nombre"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
