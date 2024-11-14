@@ -12,8 +12,8 @@ import sys
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Enlace de socket y puerto
-server_address = ('192.168.0.18', 10000)
-print >>sys.stderr, 'empezando a levantar %s puerto %s' % server_address
+server_address = ('127.0.0.1', 10000)
+print(sys.stderr, 'empezando a levantar %s puerto %s' % server_address)
 sock.bind(server_address)
 
 # Escuchando conexiones entrantes
@@ -21,20 +21,20 @@ sock.listen(1)
  
 while True:
     # Esperando conexion
-    print >>sys.stderr, 'Esperando para conectarse'
+    print(sys.stderr, 'Esperando para conectarse')
     connection, client_address = sock.accept()
     try:
-        print >>sys.stderr, 'concexion desde', client_address
+        print(sys.stderr, 'concexion desde', client_address)
  
         # Recibe los datos en trozos y reetransmite
         while True:
             data = connection.recv(19)
-            print >>sys.stderr, 'recibido "%s"' % data
+            print(sys.stderr, 'recibido "%s"' % data)
             if data:
-                print >>sys.stderr, 'enviando mensaje de vuelta al cliente'
+                print(sys.stderr, 'enviando mensaje de vuelta al cliente')
                 connection.sendall(data)
             else:
-                print >>sys.stderr, 'no hay mas datos', client_address
+                print(sys.stderr, 'no hay mas datos', client_address)
                 break
              
     finally:

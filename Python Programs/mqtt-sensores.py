@@ -10,7 +10,7 @@ def readTemperature():
     while True:
         try:
             temperature = 25 #grovepi.temp(temp_sensor, '1,2')
-            publish.single("office/temperature", '{0:0.1f}'.format(temperature), hostname="192.168.0.19")
+            publish.single("office/temperature", '{0:0.1f}'.format(temperature), hostname="127.0.0.1")
             print("publicando valores...")
             time.sleep(5)
         except KeyboardInterrupt:
