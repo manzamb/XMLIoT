@@ -7,16 +7,17 @@
          <fabricante>Raspberry</fabricante>
       </propiedades>
       <recursos>
-         <recursoIoT>
+         <recursoIoT sensorId=1>
             <tipo>sensor</tipo>
-            <senal>analoga</senal>
+            <senal>digital</senal>
             <voltaje rangoinicial="3" rangofinal="5" />
             <nombreSensor>GoveTMP</nombreSensor>
          </recursoIoT>
-         <recursoIoT>
+         <recursoIoT sensorId=2>
             <tipo>actuador</tipo>
             <senal>digital</senal>
             <voltaje rangoinicial="0" rangofinal="5" />
+            <nombreSensor>GoveLed</nombreSensor>
          </recursoIoT>
       </recursos>
    </gateway>
