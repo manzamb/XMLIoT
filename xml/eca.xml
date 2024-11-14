@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ECA tipo="sensor">
+    <Evento id=192.168.127.15>
+        <recursoIoT>1 </recursoIoT>
+    </Evento>
+    <Condicion>
+        <caracteristica propiedad="temperatura">
+        </caracteristica>
+        <umbral>18</umbral>
+        <unidad>grados</unidad>
+    </Condicion>
+    <Accion id=192.168.127.15>
+        <recursoIoT>2 </recursoIoT>
+    </Accion>
+</ECA>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<recursoIoT tipo="sensor">
-    <caracteristica propiedad="temperatura">
-    </caracteristica>
-    <umbral>18</umbral>
-    <unidad>grados</unidad>
-</recursoIoT>
