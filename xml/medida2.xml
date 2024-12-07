@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<observacion Objetoid="192.168.127.14">
+   <entidad nombre="Mesa">
+      <recursoIoT tipo="sensor" sensorId="1">
+         <caracteristica propiedad="temperatura Mesa" sensorName="Temperature">
+            <medicion>24</medicion>
+            <unidad>grados</unidad>
+            <hora utc="-5">7:26</hora>
+            <lugar lat="24.7" lon="76.5" ele="1756" />
+         </caracteristica>
+         <caracteristica propiedad="temperatura Mesa" sensorName="Humidity">
+            <medicion>78</medicion>
+            <unidad>%</unidad>
+            <hora utc="-5">7:26</hora>
+            <lugar lat="24.7" lon="76.5" ele="1756" />
+         </caracteristica>
+      </recursoIoT>
+      <recursoIoT tipo="actuador" sensorId="2">
+         <caracteristica propiedad="luz">
+            <!-- 1: Encendido 0:apagado -->
+            <estado>1</estado>
+            <hora utc="-5">7:26</hora>
+            <lugar lat="24.7" lon="76.5" ele="1756" />
+         </caracteristica>
+      </recursoIoT>
+   </entidad>
+</observacion>

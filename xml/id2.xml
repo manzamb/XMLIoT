@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objetoIoT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "id.xsd">
-    <gateway>
-        <propiedades>
-        
-        </propiedades>
-        <recursos>
-        
-        </recursos>
-    </gateway>
+<objetoIoT id="192.168.127.14">
+   <gateway>
+      <propiedades>
+         <nombre>Esp32</nombre>
+         <modelo>ESP32-WROOM-32D</modelo>
+         <fabricante>Espressif</fabricante>
+      </propiedades>
+      <recursos>
+         <recursoIoT sensorId="1">
+            <tipo>sensor</tipo>
+            <senal>digital</senal>
+            <voltaje rangoinicial="3" rangofinal="5" />
+            <nombreSensor>DHT11</nombreSensor>
+            <sensores>
+               <nombreSensor sensorName="Humidity" />
+               <nombreSensor sensorName="Temperature" />
+            </sensores>
+         </recursoIoT>
+         <recursoIoT sensorId="2">
+            <tipo>actuador</tipo>
+            <senal>digital</senal>
+            <voltaje rangoinicial="0" rangofinal="5" />
+            <nombreSensor>Led</nombreSensor>
+         </recursoIoT>
+      </recursos>
+   </gateway>
 </objetoIoT>

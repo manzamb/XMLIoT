@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<observacion>
+<observacion Objetoid="192.168.127.15">
   <entidad nombre="Tablero">
     <recursoIoT tipo="sensor" sensorId=1>
         <caracteristica propiedad="temperatura">
@@ -8,11 +8,11 @@
         <unidad>grados</unidad>
         <hora utc="-5">7:26</hora>
         <lugar lat="24.7" lon="76.5" ele="1756"></lugar>
-    </recursoIoT sensorId=2>
-        <recursoIoT tipo="actuador">
+    </recursoIoT>
+    <recursoIoT tipo="actuador" sensorId=2>
         <caracteristica propiedad="luz">
         </caracteristica>
-        <!-- 1: Encendido 2:apagado -->
+        <!-- 1: Encendido 0:apagado -->
         <estado>1</estado>
         <hora utc="-5">7:26</hora>
         <lugar lat="24.7" lon="76.5" ele="1756"></lugar>

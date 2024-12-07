@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objetoIoT id="192.168.127.17" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:noNamespaceSchemaLocation="../estandar/id2.xsd">
-   <gateway></gateway> 
+xsi:noNamespaceSchemaLocation="./id.xsd">
+   <gateway>
+     <propiedades>
+      <nombre></nombre>
+      <modelo></modelo>
+     </propiedades>
+     <recursos>
+     </recursos>
+   </gateway>
 </objetoIoT>

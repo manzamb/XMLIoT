@@ -32,7 +32,24 @@
                               </xs:simpleContent>
                             </xs:complexType>
                           </xs:element>
+                          <xs:element type="xs:string" name="nombreSensor"/>
+                          <xs:element name="sensores" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="nombreSensor" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="sensorName" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
                         </xs:sequence>
+                        <xs:attribute type="xs:byte" name="sensorId" use="optional"/>
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
